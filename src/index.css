@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 20% 6%;
+    --foreground: 214 20% 93%;
+
+    --card: 220 18% 8%;
+    --card-foreground: 214 20% 93%;
+
+    --popover: 220 18% 8%;
+    --popover-foreground: 214 20% 93%;
+
+    --primary: 160 84% 67%;
+    --primary-foreground: 220 20% 6%;
+
+    --secondary: 220 18% 12%;
+    --secondary-foreground: 214 20% 93%;
+
+    --muted: 220 18% 12%;
+    --muted-foreground: 214 15% 65%;
+
+    --accent: 160 84% 67%;
+    --accent-foreground: 220 20% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 214 20% 93%;
+
+    --border: 220 18% 15%;
+    --input: 220 18% 15%;
+    --ring: 160 84% 67%;
+
+    --radius: 1rem;
+
+    --success: 160 84% 67%;
+    --error: 0 84% 60%;
+    --warning: 45 93% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out;
+}
